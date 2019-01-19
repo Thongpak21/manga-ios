@@ -18,6 +18,7 @@ public protocol BaseRouter: URLRequestConvertible {
 
 public enum Router: BaseRouter {
     case newManga
+    case readManga(name: String, chapter: String)
 }
 
 extension Router {

@@ -9,6 +9,11 @@
 extension Router {
     public var parameters: [String: Any]? {
         switch self {
+        case .readManga(let params):
+            return [
+                "manganame": params.name,
+                "chapter": params.chapter
+            ]
         default:
             return nil
         }

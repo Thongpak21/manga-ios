@@ -29,3 +29,22 @@ extension NewsMangaDetail: ListDiffable {
         return self.name! == object.name!
     }
 }
+
+
+class MangaDetail: NSObject, Decodable {
+    var id: Int?
+    var img: String?
+    var manga: String?
+}
+
+extension MangaDetail: ListDiffable {
+    public func diffIdentifier() -> NSObjectProtocol {
+        return self as NSObjectProtocol
+    }
+    
+    public func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+        guard let object = object as? MangaDetail else { return false }
+        return self.id! == object.id!
+    }
+}
+

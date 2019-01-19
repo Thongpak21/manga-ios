@@ -13,6 +13,8 @@ extension Router {
         switch self {
         case .newManga:
             return "/showData.php"
+        case .readManga:
+            return "/chapter.php"
         }
     }
 }
