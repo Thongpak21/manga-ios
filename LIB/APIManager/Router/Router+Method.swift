@@ -10,8 +10,6 @@ import Alamofire
 extension Router {
     public var method: Alamofire.HTTPMethod {
         switch self {
-        case .login, .queryPartner, .refreshToken:
-            return .post
         default:
             return .get
         }

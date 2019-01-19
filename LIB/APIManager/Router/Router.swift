@@ -17,11 +17,7 @@ public protocol BaseRouter: URLRequestConvertible {
 }
 
 public enum Router: BaseRouter {
-    case login(username: String, password: String)
-    case getToken(token: String)
-    case getMenu(locationCode: String, ascCode: String)
-    case queryPartner(name: String, value: String)
-    case refreshToken
+    case newManga
 }
 
 extension Router {

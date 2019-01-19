@@ -42,7 +42,7 @@ open class BaseViewController: UIViewController {
     
     func setBackButton() {
          if navigationController?.viewControllers.count == 1 {
-            setLeftBarButton(with: "Cancel")
+//            setLeftBarButton(with: "Cancel")
          } else {
             let backButton = UIBarButtonItem()
             backButton.title = "Back"
