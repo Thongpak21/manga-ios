@@ -21,12 +21,13 @@ class MangaReaderViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupViewModel()
+        setupCollectionView()
     }
     
     func setupViewModel() {
         viewModel = MangaViewModel()
-        viewModel.getNewsManga().subscribe(onNext: { (_) in
+        viewModel.getManga().subscribe(onNext: { (_) in
             self.adapter.reloadData(completion: nil)
         }, onError: { (error) in
             
@@ -40,7 +41,7 @@ class MangaReaderViewController: BaseViewController {
 
 extension MangaReaderViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        if viewModel.newsManga.isEmpty {
+        if viewModel.mangas.isEmpty {
             return [ListDiffable]()
         } else {
             return [1 as ListDiffable]
@@ -48,8 +49,8 @@ extension MangaReaderViewController: ListAdapterDataSource {
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        let sectionController = MangaSectionController()
-        sectionController.newsManga = viewModel.newsManga
+        let sectionController = MangaReaderSectionController()
+        sectionController.manga = viewModel.mangas
         return sectionController
     }
     

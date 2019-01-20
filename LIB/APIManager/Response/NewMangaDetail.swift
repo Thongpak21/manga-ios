@@ -48,3 +48,15 @@ extension MangaDetail: ListDiffable {
     }
 }
 
+
+
+class MangaChapterDetail: Decodable {
+    var id: String?
+    var chapter: String?
+    var name: String?
+    var manga: String?
+    var cover: String?
+    var description: String?
+    var authors: String?
+    var genres: String?
+}

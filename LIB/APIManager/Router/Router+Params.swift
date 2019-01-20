@@ -14,6 +14,10 @@ extension Router {
                 "manganame": params.name,
                 "chapter": params.chapter
             ]
+        case .mangaChapter(let name):
+            return [
+                "manganame": name
+            ]
         default:
             return nil
         }

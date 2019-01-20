@@ -31,7 +31,6 @@ class MangaSectionController: ListSectionController {
     override func cellForItem(at index: Int) -> UICollectionViewCell {
         let cell = collectionContext?.dequeueReusableCellFromStoryboard(withIdentifier: "MangaCollectionViewCell", for: self, at: index) as! MangaCollectionViewCell
         if let imageUrl = newsManga[index].cover, let url = URL(string: imageUrl) {
-//            cell.mangaImageView.kf.setImage(with: url)
             cell.mangaImageView.kf.setImage(with: url, placeholder: nil, options: [.transition(ImageTransition.fade(1))])
         }
         cell.nameLabel.text = newsManga[index].name
@@ -41,7 +40,7 @@ class MangaSectionController: ListSectionController {
     }
     
     func itemSize() -> CGSize {
-        return CGSize(width: collectionContext!.containerSize.width / 3 - 7, height: 160)
+        return CGSize(width: collectionContext!.containerSize.width / 3 - 7, height: 180)
     }
     
     override func didUpdate(to object: Any) {
@@ -49,5 +48,8 @@ class MangaSectionController: ListSectionController {
     
     
     override func didSelectItem(at index: Int) {
+        guard let vc = viewController as? MangaViewController else { return }
+        vc.performSegue(withIdentifier: "showMangaChapter", sender: newsManga[index])
     }
+    
 }

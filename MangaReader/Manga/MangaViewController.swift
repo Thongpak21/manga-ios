@@ -51,6 +51,14 @@ class MangaViewController: BaseViewController {
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "showMangaChapter" {
+            if let manga = sender as? NewsMangaDetail, let vc = segue.destination as? MangaChapterViewController {
+                vc.mangaName = manga.slug
+            }
+        }
+    }
 }
 
 extension MangaViewController: ListAdapterDataSource {

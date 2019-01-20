@@ -31,5 +31,14 @@ class MangaManager {
         })
     }
 
+    @discardableResult
+    func mangaChapter(with mangaName: String, completion: @escaping ([MangaChapterDetail]) -> (), failure: @escaping (BaseError) -> ()) -> Request? {
+        let router = Router.mangaChapter(name: mangaName)
+        return APIManager.request(withRouter: router, responseType: [MangaChapterDetail].self, completion: { (response) in
+            completion(response)
+        }, failure: { (error) in
+            failure(error)
+        })
+    }
 }
 
