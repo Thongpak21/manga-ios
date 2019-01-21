@@ -10,9 +10,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 import MBProgressHUD
+import MaterialComponents
 
 open class BaseViewController: UIViewController {
-
+    let activityIndicator = MDCActivityIndicator()
     override open func viewDidLoad() {
         super.viewDidLoad()
         setBackButton()
@@ -31,13 +32,12 @@ open class BaseViewController: UIViewController {
     
     open func showLoading() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        if let navigationController = self.navigationController {
-            let loadingNotification = MBProgressHUD.showAdded(to: navigationController.view, animated: true)
-            loadingNotification.mode = .indeterminate
-        } else {
-            let loadingNotification = MBProgressHUD.showAdded(to: view, animated: true)
-            loadingNotification.mode = .indeterminate
-        }
+        activityIndicator.sizeToFit()
+        activityIndicator.center =  CGPoint(x: self.view.bounds.midX, y: self.view.bounds.midY - 20)
+        activityIndicator.indicatorMode = .indeterminate
+        activityIndicator.cycleColors = [.blue, .red, .cyan]
+        self.view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
     }
     
     func setBackButton() {
@@ -73,11 +73,12 @@ open class BaseViewController: UIViewController {
     
     open func hideLoading() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        if let navigationController = self.navigationController {
-            MBProgressHUD.hide(for: navigationController.view, animated: true)
-        } else {
-            MBProgressHUD.hide(for: view, animated: true)
-        }
+//        if let navigationController = self.navigationController {
+//            MBProgressHUD.hide(for: navigationController.view, animated: true)
+//        } else {
+//            MBProgressHUD.hide(for: view, animated: true)
+//        }
+        activityIndicator.stopAnimating()
     }
     
     open func showPopup(title: String, message: String) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3746146721F5B3F0005DC0F0 /* MangaAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3746146621F5B3F0005DC0F0 /* MangaAllViewController.swift */; };
 		378A725021F34B8600B62578 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A724F21F34B8600B62578 /* AppDelegate.swift */; };
 		378A725221F34B8600B62578 /* MangaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A725121F34B8600B62578 /* MangaViewController.swift */; };
 		378A725521F34B8600B62578 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378A725321F34B8600B62578 /* Main.storyboard */; };
@@ -76,6 +77,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3746146621F5B3F0005DC0F0 /* MangaAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaAllViewController.swift; sourceTree = "<group>"; };
 		378A724C21F34B8600B62578 /* MangaReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MangaReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		378A724F21F34B8600B62578 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		378A725121F34B8600B62578 /* MangaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaViewController.swift; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 				37EB59B321F35F4A00312E69 /* MangaSectionController.swift */,
 				37EB59B521F390B000312E69 /* MangaReaderViewController.swift */,
 				37EB59B721F3A15E00312E69 /* MangaReaderSectionController.swift */,
+				3746146621F5B3F0005DC0F0 /* MangaAllViewController.swift */,
 			);
 			path = Manga;
 			sourceTree = "<group>";
@@ -499,6 +502,10 @@
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -512,6 +519,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -599,6 +610,7 @@
 				37EB59B821F3A15E00312E69 /* MangaReaderSectionController.swift in Sources */,
 				378A72BF21F34DAB00B62578 /* String+Format.swift in Sources */,
 				378A72C221F34DAB00B62578 /* UIViewControllerExtensions.swift in Sources */,
+				3746146721F5B3F0005DC0F0 /* MangaAllViewController.swift in Sources */,
 				378A72BB21F34DAB00B62578 /* Router+URLRequest.swift in Sources */,
 				378A72AC21F34DAB00B62578 /* CheckBox.swift in Sources */,
 				378A72A921F34DAB00B62578 /* BaseLabel.swift in Sources */,

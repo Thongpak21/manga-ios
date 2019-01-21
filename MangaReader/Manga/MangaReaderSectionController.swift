@@ -27,21 +27,27 @@ class MangaReaderSectionController: ListSectionController {
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
         let cell = collectionContext?.dequeueReusableCellFromStoryboard(withIdentifier: "MangaReaderCollectionViewCell", for: self, at: index) as! MangaReaderCollectionViewCell
-        let processor = DownsamplingImageProcessor(size: cell.mangaImageView.bounds.size)
-            >> RoundCornerImageProcessor(cornerRadius: 20)
         if let imageUrl = manga[index].img, let url = URL(string: imageUrl) {
-//            cell.mangaImageView.kf.setImage(with: url, placeholder: nil, options: [.transition(ImageTransition.fade(1))])
             cell.mangaImageView.kf.setImage(with: url, placeholder: nil, options:  [
-//                .processor(processor),
-//                .scaleFactor(UIScreen.main.scale),
                 .transition(.fade(1)),
                 .cacheOriginalImage
                 ], progressBlock: {
                     receivedSize, totalSize in
-                    let percentage = (Float(receivedSize) / Float(totalSize)) * 100.0
-                    print("downloading progress: \(percentage)%")
-//                    myIndicator.percentage = percentage
-            })
+                    let percentage = (Float(receivedSize) / Float(totalSize))
+                    cell.activityIndicator.progress = percentage
+                    cell.activityIndicator.startAnimating()
+                    if percentage == 1.0 {
+                        cell.activityIndicator.stopAnimating()
+                    }
+            }) { (_) in
+                cell.activityIndicator.stopAnimating()
+            }
+        }
+        if index + 1 < manga.count, let imageUrl = manga[index+1].img, let url = URL(string: imageUrl) {
+            let _ = UIImageView().kf.setImage(with: url, placeholder: nil, options:  [.transition(.fade(1)),.cacheOriginalImage])
+        }
+        if index + 2 < manga.count, let imageUrl = manga[index+2].img, let url = URL(string: imageUrl) {
+            let _ = UIImageView().kf.setImage(with: url, placeholder: nil, options:  [.transition(.fade(1)),.cacheOriginalImage])
         }
         return cell
     }

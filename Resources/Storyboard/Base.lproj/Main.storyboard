@@ -37,19 +37,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lT6-Rf-sBh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="155"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="140" id="Vn0-1o-drk"/>
+                                                        <constraint firstAttribute="height" constant="155" id="Vn0-1o-drk"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fW5-7c-zxK" customClass="BaseLabel" customModule="MangaReader" customModuleProvider="target">
-                                                    <rect key="frame" x="5" y="145" width="130" height="21"/>
+                                                    <rect key="frame" x="5" y="160" width="130" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qJ-sv-rFs" customClass="BaseLabel" customModule="MangaReader" customModuleProvider="target">
-                                                    <rect key="frame" x="5" y="171" width="130" height="21"/>
+                                                    <rect key="frame" x="5" y="186" width="130" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -104,66 +104,6 @@
             </objects>
             <point key="canvasLocation" x="1955" y="-9"/>
         </scene>
-        <!--Manga Reader View Controller-->
-        <scene sceneID="pwv-kp-abr">
-            <objects>
-                <viewController storyboardIdentifier="MangaReaderViewController" hidesBottomBarWhenPushed="YES" id="Id3-4v-OFn" customClass="MangaReaderViewController" customModule="MangaReader" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wE9-ne-DZr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z5B-bG-Byu">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rlV-EH-T81">
-                                    <size key="itemSize" width="278" height="394"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MangaReaderCollectionViewCell" id="JBa-cq-2Ch" customClass="MangaReaderCollectionViewCell" customModule="MangaReader" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="126.5" width="278" height="394"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="278" height="394"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ITP-qD-aaw">
-                                                    <rect key="frame" x="0.0" y="0.0" width="278" height="394"/>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="ITP-qD-aaw" secondAttribute="trailing" id="M59-hA-c7C"/>
-                                            <constraint firstItem="ITP-qD-aaw" firstAttribute="top" secondItem="JBa-cq-2Ch" secondAttribute="top" id="TG6-MB-8nV"/>
-                                            <constraint firstAttribute="bottom" secondItem="ITP-qD-aaw" secondAttribute="bottom" id="fiq-Hh-TLU"/>
-                                            <constraint firstItem="ITP-qD-aaw" firstAttribute="leading" secondItem="JBa-cq-2Ch" secondAttribute="leading" id="k4y-5W-Hy4"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="mangaImageView" destination="ITP-qD-aaw" id="0ra-jP-01F"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="z5B-bG-Byu" firstAttribute="leading" secondItem="C0y-5c-DKa" secondAttribute="leading" id="Lwg-BA-Hj1"/>
-                            <constraint firstAttribute="bottom" secondItem="z5B-bG-Byu" secondAttribute="bottom" id="i1n-6D-CG4"/>
-                            <constraint firstItem="C0y-5c-DKa" firstAttribute="trailing" secondItem="z5B-bG-Byu" secondAttribute="trailing" id="y4O-40-ReA"/>
-                            <constraint firstItem="z5B-bG-Byu" firstAttribute="top" secondItem="C0y-5c-DKa" secondAttribute="top" id="ya5-9H-ru6"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="C0y-5c-DKa"/>
-                    </view>
-                    <connections>
-                        <outlet property="collectionView" destination="z5B-bG-Byu" id="kh0-rk-Vf2"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6DB-x8-ZTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3847" y="-564"/>
-        </scene>
         <!--News-->
         <scene sceneID="62U-3i-5gN">
             <objects>
@@ -189,6 +129,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yBz-2c-0sh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f0y-Ip-Pbj">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

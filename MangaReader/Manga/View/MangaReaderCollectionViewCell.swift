@@ -7,7 +7,19 @@
 //
 
 import UIKit
+import MaterialComponents
 
 class MangaReaderCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var mangaImageView: UIImageView!
+    let activityIndicator = MDCActivityIndicator()
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        activityIndicator.sizeToFit()
+        activityIndicator.center = CGPoint(x: mangaImageView.bounds.midX, y: mangaImageView.bounds.midY)
+        activityIndicator.indicatorMode = .determinate
+        activityIndicator.cycleColors = [.blue, .red, .cyan]
+        mangaImageView.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+    }
 }

@@ -14,6 +14,7 @@ class MangaViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     lazy var adapter: ListAdapter = {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
+
     }()
     let disposeBag = DisposeBag()
     lazy var refreshControl: UIRefreshControl = {
@@ -36,7 +37,9 @@ class MangaViewController: BaseViewController {
     
     func setupViewModel() {
         viewModel = MangaViewModel()
+        showLoading()
         viewModel.getNewsManga().subscribe(onNext: { (_) in
+            self.hideLoading()
             self.adapter.reloadData(completion: nil)
         }, onError: { (error) in
             
@@ -49,6 +52,12 @@ class MangaViewController: BaseViewController {
     }
 
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        viewModel.getNewsManga().subscribe(onNext: { (_) in
+            self.adapter.reloadData(completion: nil)
+            self.refreshControl.endRefreshing()
+        }, onError: { (error) in
+            
+        }).disposed(by: disposeBag)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

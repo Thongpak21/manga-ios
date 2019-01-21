@@ -22,8 +22,9 @@ class MangaChapterViewController: BaseViewController {
     
     func setupViewModel() {
         viewModel = MangaViewModel()
-        
+        showLoading()
         viewModel.getMangaChapter(mangaName: mangaName ?? "onepiece").subscribe(onNext: { (_) in
+            self.hideLoading()
             self.tableView.reloadData()
         }, onError: { (error) in
             
@@ -32,6 +33,15 @@ class MangaChapterViewController: BaseViewController {
     func setupTableView() {
         tableView.estimatedRowHeight = 200
         tableView.rowHeight = UITableView.automaticDimension
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "readManga" {
+            if let vc = segue.destination as? MangaReaderViewController, let sender = sender as? MangaChapterDetail {
+                vc.mangaDetail = sender
+            }
+        }
     }
 }
 
@@ -68,6 +78,17 @@ extension MangaChapterViewController: UITableViewDataSource {
                 cell.chapterNameLabel.text = "ตอนที่ \(chapter) \(chapterName)"
             }
             return cell
+        }
+    }
+}
+
+extension MangaChapterViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch TableViewIndex(rawValue: indexPath.section)! {
+        case .chapter:
+            self.performSegue(withIdentifier: "readManga", sender: viewModel.mangaWithAllChapter[indexPath.row])
+        default:
+            break
         }
     }
 }

@@ -34,13 +34,13 @@ class MangaSectionController: ListSectionController {
             cell.mangaImageView.kf.setImage(with: url, placeholder: nil, options: [.transition(ImageTransition.fade(1))])
         }
         cell.nameLabel.text = newsManga[index].name
-
+        cell.updateLabel.text = newsManga[index].last_update
 //        cell.mangaImageView.backgroundColor = UIColor.black
         return cell
     }
     
     func itemSize() -> CGSize {
-        return CGSize(width: collectionContext!.containerSize.width / 3 - 7, height: 180)
+        return CGSize(width: collectionContext!.containerSize.width / 3 - 7, height: 200)
     }
     
     override func didUpdate(to object: Any) {

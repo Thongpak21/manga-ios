@@ -26,9 +26,9 @@ class MangaViewModel {
         })
     }
     
-    func getManga() -> Observable<Void?> {
+    func getManga(name: String, chapter: String) -> Observable<Void?> {
         return Observable.create({ (observer) -> Disposable in
-            let request = MangaManager().manga(mangaName: "onepiece", chapter: "930", completion: { (response) in
+            let request = MangaManager().manga(mangaName: name, chapter: chapter, completion: { (response) in
                 self.mangas = response
                 observer.onNext(nil)
             }, failure: { (error) in

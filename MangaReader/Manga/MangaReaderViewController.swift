@@ -16,7 +16,7 @@ class MangaReaderViewController: BaseViewController {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
     }()
     let disposeBag = DisposeBag()
-
+    var mangaDetail: MangaChapterDetail!
     var viewModel: MangaViewModel!
     
     override func viewDidLoad() {
@@ -27,7 +27,7 @@ class MangaReaderViewController: BaseViewController {
     
     func setupViewModel() {
         viewModel = MangaViewModel()
-        viewModel.getManga().subscribe(onNext: { (_) in
+        viewModel.getManga(name: mangaDetail.manga ?? "onepiece", chapter: mangaDetail.chapter ?? "0").subscribe(onNext: { (_) in
             self.adapter.reloadData(completion: nil)
         }, onError: { (error) in
             

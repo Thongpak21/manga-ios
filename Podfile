@@ -13,5 +13,6 @@ target 'MangaReader' do
     pod 'RxSwift'
     pod 'Hero'
     pod 'IGListKit'
+    pod 'MaterialComponents/ActivityIndicator'
 end
 
