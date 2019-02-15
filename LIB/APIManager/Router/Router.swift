@@ -20,6 +20,7 @@ public enum Router: BaseRouter {
     case newManga
     case readManga(name: String, chapter: String)
     case mangaChapter(name: String)
+    case allManga(manga: String)
 }
 
 extension Router {

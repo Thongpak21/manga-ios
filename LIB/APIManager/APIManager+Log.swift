@@ -32,7 +32,7 @@ extension APIManager {
         self.logDivider(start: true)
         self.logPath(url: httpResponse.url, withKey: "RESPONSE")
         self.logStatus(httpResponse: httpResponse)
-//        self.logJson(data: response.data)
+        self.logJson(data: response.data)
         self.logDivider(start: false)
         #endif
     }

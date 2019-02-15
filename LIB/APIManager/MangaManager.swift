@@ -22,6 +22,16 @@ class MangaManager {
     }
     
     @discardableResult
+    func allManga(manga: String, completion: @escaping ([NewsMangaDetail]) -> (), failure: @escaping (BaseError) -> ()) -> Request? {
+        let router = Router.allManga(manga: manga)
+        return APIManager.request(withRouter: router, responseType: [NewsMangaDetail].self, completion: { (response) in
+            completion(response)
+        }, failure: { (error) in
+            failure(error)
+        })
+    }
+    
+    @discardableResult
     func manga(mangaName: String, chapter: String, completion: @escaping ([MangaDetail]) -> (), failure: @escaping (BaseError) -> ()) -> Request? {
         let router = Router.readManga(name: mangaName, chapter: chapter)
         return APIManager.request(withRouter: router, responseType: [MangaDetail].self, completion: { (response) in

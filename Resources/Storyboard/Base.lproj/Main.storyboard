@@ -28,53 +28,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MangaCollectionViewCell" id="Zur-o6-RC0" customClass="MangaCollectionViewCell" customModule="MangaReader" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="140" height="186"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="140" height="186"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lT6-Rf-sBh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="155"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="155" id="Vn0-1o-drk"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fW5-7c-zxK" customClass="BaseLabel" customModule="MangaReader" customModuleProvider="target">
-                                                    <rect key="frame" x="5" y="160" width="130" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qJ-sv-rFs" customClass="BaseLabel" customModule="MangaReader" customModuleProvider="target">
-                                                    <rect key="frame" x="5" y="186" width="130" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </view>
-                                        <color key="backgroundColor" name="Primary50"/>
-                                        <constraints>
-                                            <constraint firstItem="lT6-Rf-sBh" firstAttribute="top" secondItem="Zur-o6-RC0" secondAttribute="top" id="BKE-YO-8Ze"/>
-                                            <constraint firstAttribute="trailing" secondItem="lT6-Rf-sBh" secondAttribute="trailing" id="D3v-7f-MHv"/>
-                                            <constraint firstItem="lT6-Rf-sBh" firstAttribute="leading" secondItem="Zur-o6-RC0" secondAttribute="leading" id="FAn-ef-O9L"/>
-                                            <constraint firstItem="4qJ-sv-rFs" firstAttribute="top" secondItem="fW5-7c-zxK" secondAttribute="bottom" constant="5" id="LFu-hb-r2t"/>
-                                            <constraint firstAttribute="trailing" secondItem="fW5-7c-zxK" secondAttribute="trailing" constant="5" id="TTP-EA-Tzd"/>
-                                            <constraint firstItem="fW5-7c-zxK" firstAttribute="leading" secondItem="Zur-o6-RC0" secondAttribute="leading" constant="5" id="aM0-Fa-Wzf"/>
-                                            <constraint firstAttribute="trailing" secondItem="4qJ-sv-rFs" secondAttribute="trailing" constant="5" id="eOJ-4h-JLc"/>
-                                            <constraint firstItem="fW5-7c-zxK" firstAttribute="top" secondItem="lT6-Rf-sBh" secondAttribute="bottom" constant="5" id="j91-0f-hDu"/>
-                                            <constraint firstItem="4qJ-sv-rFs" firstAttribute="leading" secondItem="Zur-o6-RC0" secondAttribute="leading" constant="5" id="s6O-nd-L4i"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="mangaImageView" destination="lT6-Rf-sBh" id="MR4-vE-jqg"/>
-                                            <outlet property="nameLabel" destination="fW5-7c-zxK" id="WbC-U1-KGF"/>
-                                            <outlet property="updateLabel" destination="4qJ-sv-rFs" id="1vi-6U-obT"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -102,13 +56,84 @@
                 <viewControllerPlaceholder storyboardName="Manga" referencedIdentifier="MangaChapterViewController" id="Lga-bI-q4W" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2AU-EF-4GQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1955" y="-9"/>
+            <point key="canvasLocation" x="3277" y="-112"/>
+        </scene>
+        <!--Manga All View Controller-->
+        <scene sceneID="TGe-Mp-nrl">
+            <objects>
+                <viewController id="4aD-IO-bwF" customClass="MangaAllViewController" customModule="MangaReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JbX-sC-U3u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lyv-D8-E6C">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" name="Primary200"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xwg-Jz-aYo">
+                                    <size key="itemSize" width="140" height="186"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5uw-xC-cE7" firstAttribute="trailing" secondItem="lyv-D8-E6C" secondAttribute="trailing" id="3zV-uG-ydN"/>
+                            <constraint firstItem="lyv-D8-E6C" firstAttribute="top" secondItem="JbX-sC-U3u" secondAttribute="top" id="FFx-Ez-dkd"/>
+                            <constraint firstItem="lyv-D8-E6C" firstAttribute="leading" secondItem="JbX-sC-U3u" secondAttribute="leading" id="jpv-Pr-Npn"/>
+                            <constraint firstAttribute="bottom" secondItem="lyv-D8-E6C" secondAttribute="bottom" id="pYb-Vm-1DV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5uw-xC-cE7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="75i-Jc-KDd"/>
+                    <connections>
+                        <outlet property="collectionView" destination="lyv-D8-E6C" id="bgk-uz-r96"/>
+                        <segue destination="Lga-bI-q4W" kind="show" identifier="showMangaChapter" id="G3m-vY-Htm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ont-rj-zLp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="398.95052473763121"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LRv-gD-jFR">
+            <objects>
+                <viewController id="FZe-yG-LB6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JUr-vx-cFm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="qX8-yQ-XJn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8bz-Q4-hY4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sFN-lC-WUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="1094"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dTx-KF-mIe">
+            <objects>
+                <viewController id="Eh1-XP-67p" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LPY-yd-78k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bJc-IF-ITa"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cjb-5w-Aze"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uBO-wf-PO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="-1325"/>
         </scene>
         <!--News-->
         <scene sceneID="62U-3i-5gN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZaJ-qZ-GsC" customClass="BaseNavigationViewController" customModule="MangaReader" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="News" id="FjX-bX-HxT"/>
+                    <tabBarItem key="tabBarItem" title="News" image="ic_notification" id="FjX-bX-HxT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a5c-03-gSJ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -123,10 +148,10 @@
             </objects>
             <point key="canvasLocation" x="1072.8" y="-564.46776611694156"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Base Tab Bar View Controller-->
         <scene sceneID="lCi-aj-RmH">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yBz-2c-0sh" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yBz-2c-0sh" customClass="BaseTabBarViewController" customModule="MangaReader" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f0y-Ip-Pbj">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -135,19 +160,83 @@
                     </tabBar>
                     <connections>
                         <segue destination="ZaJ-qZ-GsC" kind="relationship" relationship="viewControllers" id="rBt-8c-6gR"/>
+                        <segue destination="ZHO-DR-pf1" kind="relationship" relationship="viewControllers" id="DRy-Sx-LQt"/>
+                        <segue destination="dbW-Ro-hRn" kind="relationship" relationship="viewControllers" id="oLO-1p-SX8"/>
+                        <segue destination="AP1-FP-FQv" kind="relationship" relationship="viewControllers" id="BT4-ck-Bwz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48V-oH-PEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="-564.46776611694156"/>
+            <point key="canvasLocation" x="-866" y="100"/>
+        </scene>
+        <!--Manga-->
+        <scene sceneID="YJz-G6-usx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZHO-DR-pf1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Manga" image="search" id="HXm-uE-1HI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yvD-0i-5iz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4aD-IO-bwF" kind="relationship" relationship="rootViewController" id="KkD-QJ-SoT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pSO-SD-c08" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072.8" y="398.95052473763121"/>
+        </scene>
+        <!--Recently-->
+        <scene sceneID="uzI-oa-k38">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dbW-Ro-hRn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Recently" image="Recently" id="fUP-x2-rzY"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cds-VE-U0L">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FZe-yG-LB6" kind="relationship" relationship="rootViewController" id="USE-oo-XjV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yyX-uq-mEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1073" y="1095"/>
+        </scene>
+        <!--Saved-->
+        <scene sceneID="gM2-TK-yC8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AP1-FP-FQv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Saved" image="Saved" id="MaJ-8S-Tcy"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rwd-r8-uku">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Eh1-XP-67p" kind="relationship" relationship="rootViewController" id="jJn-aT-MRV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5JS-GL-dmx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1073" y="-1325"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Recently" width="18" height="18"/>
+        <image name="Saved" width="19" height="16"/>
+        <image name="ic_notification" width="24" height="24"/>
+        <image name="search" width="18" height="18"/>
         <namedColor name="Primary200">
             <color red="0.92199999094009399" green="0.92199999094009399" blue="0.92199999094009399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Primary50">
-            <color red="0.97600001096725464" green="0.97600001096725464" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9UJ-JC-vHD"/>
+    </inferredMetricsTieBreakers>
 </document>

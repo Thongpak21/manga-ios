@@ -17,6 +17,8 @@ extension Router {
             return "/chapter.php"
         case .mangaChapter:
             return "/showlist.php"
+        case .allManga:
+            return "/showmanga.php"
         }
     }
 }

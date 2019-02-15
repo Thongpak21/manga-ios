@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MangaCollectionViewCell" id="VMV-v0-hOE" customClass="MangaCollectionViewCell" customModule="MangaReader" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="186"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="140" height="186"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="agi-Jb-W3S">
+                        <rect key="frame" x="0.0" y="0.0" width="140" height="155"/>
+                        <color key="backgroundColor" name="pink"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="155" id="Fhu-Oz-pbP"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ln1-0R-NGv" customClass="BaseLabel" customModule="MangaReader" customModuleProvider="target">
+                        <rect key="frame" x="5" y="160" width="130" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDG-gh-jgu" customClass="BaseLabel" customModule="MangaReader" customModuleProvider="target">
+                        <rect key="frame" x="5" y="186" width="130" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" name="Primary50"/>
+            <constraints>
+                <constraint firstItem="HDG-gh-jgu" firstAttribute="top" secondItem="Ln1-0R-NGv" secondAttribute="bottom" constant="5" id="98Q-v5-oGq"/>
+                <constraint firstAttribute="trailing" secondItem="Ln1-0R-NGv" secondAttribute="trailing" constant="5" id="c72-d4-IaC"/>
+                <constraint firstItem="Ln1-0R-NGv" firstAttribute="top" secondItem="agi-Jb-W3S" secondAttribute="bottom" constant="5" id="fgT-NI-vyB"/>
+                <constraint firstAttribute="trailing" secondItem="HDG-gh-jgu" secondAttribute="trailing" constant="5" id="lNt-W7-d6Y"/>
+                <constraint firstItem="agi-Jb-W3S" firstAttribute="top" secondItem="VMV-v0-hOE" secondAttribute="top" id="loh-om-k1M"/>
+                <constraint firstItem="agi-Jb-W3S" firstAttribute="leading" secondItem="VMV-v0-hOE" secondAttribute="leading" id="nSX-Hk-hvq"/>
+                <constraint firstItem="HDG-gh-jgu" firstAttribute="leading" secondItem="VMV-v0-hOE" secondAttribute="leading" constant="5" id="qfJ-2u-eMA"/>
+                <constraint firstAttribute="trailing" secondItem="agi-Jb-W3S" secondAttribute="trailing" id="utl-PH-Okx"/>
+                <constraint firstItem="Ln1-0R-NGv" firstAttribute="leading" secondItem="VMV-v0-hOE" secondAttribute="leading" constant="5" id="wat-8F-ZKG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Oiy-CK-Kip"/>
+            <connections>
+                <outlet property="mangaImageView" destination="agi-Jb-W3S" id="pSu-UL-fdV"/>
+                <outlet property="nameLabel" destination="Ln1-0R-NGv" id="kTX-Nr-QUd"/>
+                <outlet property="updateLabel" destination="HDG-gh-jgu" id="ONV-Lw-NZZ"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Primary50">
+            <color red="0.97600001096725464" green="0.97600001096725464" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="pink">
+            <color red="0.88627450980392153" green="0.81176470588235294" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

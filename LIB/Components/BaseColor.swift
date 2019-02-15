@@ -24,4 +24,5 @@ extension UIColor {
     static let Green = UIColor(named: "Green")!
     static let GradientBlue = UIColor(named: "GradientBlue")!
     static let GradientGreen = UIColor(named: "GradientGreen")!
+    static let pink = UIColor(named: "pink")!
 }

@@ -18,6 +18,10 @@ extension Router {
             return [
                 "manganame": name
             ]
+        case .allManga(let manga):
+            return [
+                "sort": manga + "%"
+            ]
         default:
             return nil
         }

@@ -23,27 +23,27 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" name="Primary100"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="uHS-LN-xbN">
-                                    <rect key="frame" x="0.0" y="254" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="223" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MangaChapterTitleTableViewCell" rowHeight="182" id="BYF-Dg-cqf" customClass="MangaChapterTitleTableViewCell" customModule="MangaReader" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="182"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MangaChapterTitleTableViewCell" rowHeight="151" id="BYF-Dg-cqf" customClass="MangaChapterTitleTableViewCell" customModule="MangaReader" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="151"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BYF-Dg-cqf" id="m0p-AY-lBz">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="181.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dwT-Ri-7Oy">
-                                                    <rect key="frame" x="5" y="15" width="107" height="155"/>
+                                                    <rect key="frame" x="5" y="15" width="100" height="130"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="107" id="auj-im-irR"/>
-                                                        <constraint firstAttribute="height" constant="155" id="eaC-XA-ZHc"/>
+                                                        <constraint firstAttribute="width" constant="100" id="4qN-2V-gDL"/>
+                                                        <constraint firstAttribute="height" constant="130" id="Eid-C1-mUA"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9H-0p-2PR" customClass="BaseLabel" customModule="MangaReader" customModuleProvider="target">
-                                                    <rect key="frame" x="120" y="15" width="245" height="20.5"/>
+                                                    <rect key="frame" x="113" y="15" width="252" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -54,11 +54,11 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="e9H-0p-2PR" firstAttribute="top" secondItem="m0p-AY-lBz" secondAttribute="top" constant="15" id="1V9-4f-exq"/>
-                                                <constraint firstAttribute="bottom" secondItem="dwT-Ri-7Oy" secondAttribute="bottom" constant="11.5" id="6Xb-Fs-7bZ"/>
+                                                <constraint firstItem="dwT-Ri-7Oy" firstAttribute="top" secondItem="m0p-AY-lBz" secondAttribute="top" constant="15" id="7p0-AU-fm0"/>
                                                 <constraint firstItem="dwT-Ri-7Oy" firstAttribute="leading" secondItem="m0p-AY-lBz" secondAttribute="leading" constant="5" id="99U-jY-0UE"/>
-                                                <constraint firstItem="dwT-Ri-7Oy" firstAttribute="top" secondItem="m0p-AY-lBz" secondAttribute="top" constant="15" id="c6W-dJ-FoI"/>
                                                 <constraint firstAttribute="trailing" secondItem="e9H-0p-2PR" secondAttribute="trailing" constant="10" id="uvU-A1-zUR"/>
                                                 <constraint firstItem="e9H-0p-2PR" firstAttribute="leading" secondItem="dwT-Ri-7Oy" secondAttribute="trailing" constant="8" id="wNM-Wd-LmK"/>
+                                                <constraint firstAttribute="bottom" secondItem="e9H-0p-2PR" secondAttribute="bottom" constant="115" id="wv0-ci-eNs"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,7 +68,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MangaChapterTableViewCell" id="m2a-91-yZt" customClass="MangaChapterTableViewCell" customModule="MangaReader" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="210" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="179" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m2a-91-yZt" id="nBK-mq-aSH">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>

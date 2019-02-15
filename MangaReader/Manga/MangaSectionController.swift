@@ -29,13 +29,13 @@ class MangaSectionController: ListSectionController {
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
-        let cell = collectionContext?.dequeueReusableCellFromStoryboard(withIdentifier: "MangaCollectionViewCell", for: self, at: index) as! MangaCollectionViewCell
+        
+        let cell = collectionContext?.dequeueReusableCell(withNibName: "MangaCollectionViewCell", bundle: nil, for: self, at: index) as! MangaCollectionViewCell
         if let imageUrl = newsManga[index].cover, let url = URL(string: imageUrl) {
             cell.mangaImageView.kf.setImage(with: url, placeholder: nil, options: [.transition(ImageTransition.fade(1))])
         }
         cell.nameLabel.text = newsManga[index].name
         cell.updateLabel.text = newsManga[index].last_update
-//        cell.mangaImageView.backgroundColor = UIColor.black
         return cell
     }
     
@@ -48,8 +48,11 @@ class MangaSectionController: ListSectionController {
     
     
     override func didSelectItem(at index: Int) {
-        guard let vc = viewController as? MangaViewController else { return }
-        vc.performSegue(withIdentifier: "showMangaChapter", sender: newsManga[index])
+        if let vc = viewController as? MangaViewController {
+            vc.performSegue(withIdentifier: "showMangaChapter", sender: newsManga[index])
+        } else if let vc = viewController as? MangaAllViewController {
+            vc.performSegue(withIdentifier: "showMangaChapter", sender: newsManga[index])
+        }
     }
     
 }

@@ -28,7 +28,7 @@ public class APIManager {
         return manager.request(router)
             .logRequest()
             .responseData(completionHandler: { (response) in
-                self.logResponse(response: response)
+//                self.logResponse(response: response)
                 switch response.result {
                 case .success(let data):
                     do {

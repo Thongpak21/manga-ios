@@ -106,6 +106,22 @@ open class BaseViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
+    open func setSearchIcon() {
+        if self.navigationController?.viewControllers.count ?? 0 > 0 {
+            let backButtonImage = UIImage(named: "search")
+            let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+            backButton.setImage(backButtonImage, for: .normal)
+            backButton.tintColor = UIColor.black
+            backButton.addTarget(self, action: #selector(self.rightButtonAction), for: .touchUpInside)
+            
+            let backButtonItem = UIBarButtonItem(customView: backButton)
+            self.navigationItem.rightBarButtonItem = backButtonItem
+        }
+    }
+    
+    @objc func rightButtonAction() {
+        
+    }
 }
 
 extension BaseViewController: UIGestureRecognizerDelegate {

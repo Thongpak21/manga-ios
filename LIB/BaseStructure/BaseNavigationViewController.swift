@@ -26,14 +26,36 @@ class BaseNavigationViewController: UINavigationController {
 //        UIBarButtonItem.appearance().setTitleTextAttributes([
 //            NSAttributedString.Key.font : BaseFont.prompt.Medium(),
 //            NSAttributedString.Key.foregroundColor: UIColor.softBlue as Any], for: .highlighted)
-        self.navigationBar.tintColor = UIColor.black
+        self.navigationBar.tintColor = UIColor.white
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
     }
     
     public func setNavigationBarProperties() {
         self.navigationBar.barStyle     = UIBarStyle.default
-        self.navigationBar.barTintColor = UIColor.Secondary
+        self.navigationBar.barTintColor = UIColor.white
         self.navigationBar.tintColor    = UIColor.black
         self.navigationBar.isTranslucent  = false
     }
 }
+
+
+import UIKit
+
+extension UISearchBar {
+    
+    func setFont() {
+        
+        for view : UIView in (self.subviews[0]).subviews {
+            
+            if let textField = view as? UITextField {
+                textField.font = BaseFontSize.Medium.getFont()
+                textField.textColor = UIColor.black
+                textField.clearButtonMode = .whileEditing
+                let attributes = [
+                    NSAttributedString.Key.foregroundColor: UIColor.black,
+                    NSAttributedString.Key.font : BaseFontSize.Medium.getFont()
+                ]
+                textField.attributedPlaceholder = NSAttributedString(string: "Search".localized(), attributes:attributes)
+            }
+        }
+    } }

@@ -10,7 +10,7 @@ import Alamofire
 
 extension Router {
     public func asURLRequest() throws -> URLRequest {
-        let url = URL(string: urlPath)!
+        let url = URL(string: urlPath.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)!
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
         urlRequest.httpBody = Data()

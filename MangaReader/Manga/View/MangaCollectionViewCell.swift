@@ -14,7 +14,7 @@ class MangaCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var updateLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.layer.cornerRadius = 4
+        self.layer.cornerRadius = 7
         self.clipsToBounds = true
     }
 }
