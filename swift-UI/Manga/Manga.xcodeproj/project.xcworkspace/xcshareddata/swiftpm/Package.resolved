@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ActivityIndicatorView",
+        "repositoryURL": "https://github.com/exyte/ActivityIndicatorView",
+        "state": {
+          "branch": null,
+          "revision": "d8c3463e70761c3145213ca207fb7d6857910f0b",
+          "version": "0.0.1"
+        }
+      },
+      {
+        "package": "ASCollectionView",
+        "repositoryURL": "https://github.com/apptekstudios/ASCollectionView",
+        "state": {
+          "branch": null,
+          "revision": "d03a4ed416dc7337ee95a08611028ad9d80cf419",
+          "version": "1.4.2"
+        }
+      },
+      {
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher",
+        "state": {
+          "branch": null,
+          "revision": "7ccfb6cefdb6180cde839310e3dbd5b2d6fefee5",
+          "version": "5.13.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

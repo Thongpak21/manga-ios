@@ -6,7 +6,7 @@ target 'MangaReader' do
     
     use_frameworks!
 
-    pod 'Alamofire'
+    pod 'Alamofire', '~>4.9.0'
     pod 'Kingfisher'
     pod 'MBProgressHUD'
     pod 'RxCocoa'

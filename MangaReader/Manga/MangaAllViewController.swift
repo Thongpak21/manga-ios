@@ -70,7 +70,7 @@ class MangaAllViewController: BaseViewController {
     func setupViewModel() {
         viewModel = MangaViewModel()
         showLoading()
-        viewModel.getAllManga().subscribe(onNext: { (_) in
+        viewModel.getAllManga(manga: "%").subscribe(onNext: { (_) in
             self.hideLoading()
             self.adapter.reloadData(completion: nil)
         }, onError: { (error) in
