@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NewsManga: Codable {
+struct NewsManga: Codable, Equatable, Hashable {
     var lastChapter: String?
     var lastChapter1: Int?
     var lastChapter2: Int?
@@ -26,4 +26,11 @@ struct NewsManga: Codable {
         case slug
         case lastUpdate = "last_update"
     }
+}
+
+
+extension NewsManga {
+    static let mockedData: [NewsManga] = [
+        NewsManga(lastChapter: "qwe", lastChapter1: 12, lastChapter2: 123, name: "Naruto", cover: nil, slug: nil, lastUpdate: nil)
+    ]
 }

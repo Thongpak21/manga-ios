@@ -17,13 +17,13 @@ struct AppState: Equatable {
 
 extension AppState {
     struct UserData: Equatable {
-//        var countries: Loadable<[Country]> = .notRequested
+        var newsMangas: Loadable<[NewsManga]> = .notRequested
     }
 }
 
 extension AppState {
     struct ViewRouting: Equatable {
-
+        var newsMangas = MangaListView.Routing()
     }
 }
 
@@ -44,7 +44,7 @@ func == (lhs: AppState, rhs: AppState) -> Bool {
 extension AppState {
     static var preview: AppState {
         var state = AppState()
-//        state.userData.countries = .loaded(Country.mockedData)
+        state.userData.newsMangas = .loaded(NewsManga.mockedData)
         state.system.isActive = true
         return state
     }

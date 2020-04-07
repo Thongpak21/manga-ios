@@ -9,25 +9,25 @@
 import SwiftUI
 
 struct AppView: View {
+    private let container: DIContainer
+    init(container: DIContainer) {
+        self.container = container
+    }
+    
     var body: some View {
         TabView {
-            MangaView()
+            MangaListView().inject(container)
                 .tabItem {
                     Image("ic_notification")
                     Text("Menu")
                 }
-            MangaView()
-                .tabItem {
-                    Image("ic_notification")
-                    Text("Menu")
-            }
-        }.accentColor(.red)
+        }.accentColor(.secondary)
     }
 }
 
 
 struct AppView_Previews: PreviewProvider {
     static var previews: some View {
-        AppView()
+        AppView(container: .preview)
     }
 }

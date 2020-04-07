@@ -27,7 +27,7 @@ struct MangaRepository: MangaRepositoryProtocol {
     }
     
     func loadNewsMangas() -> AnyPublisher<[NewsManga], Error> {
-        
+        return call(endpoint: API.newsMangas)
     }
     
 //    func loadCountries() -> AnyPublisher<[Country], Error> {
@@ -59,16 +59,13 @@ extension MangaRepository {
 extension MangaRepository.API: APICall {
     var path: String {
         switch self {
-        case .allCountries:
-            return "/all"
-        case let .countryDetails(country):
-            let encodedName = country.name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-            return "/name/\(encodedName ?? country.name)"
+        case .newsMangas:
+            return "/showData.php"
         }
     }
     var method: String {
         switch self {
-        case .allCountries, .countryDetails:
+        case .newsMangas:
             return "GET"
         }
     }

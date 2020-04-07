@@ -10,13 +10,14 @@ import Foundation
 
 extension DIContainer {
     struct Interactors {
+        let mangaInterractor: MangaInteractorProtocol
 
-        init() {
-
+        init(mangaInterractor: MangaInteractorProtocol) {
+            self.mangaInterractor = mangaInterractor
         }
         
         static var stub: Self {
-            .init()
+            .init(mangaInterractor: StubMangaInteractor())
         }
     }
 }
